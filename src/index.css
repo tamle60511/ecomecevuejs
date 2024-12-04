@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* For Debugging, please uncomment this code below */
+  /* * {
+    @apply border border-red-500;
+  } */
+
+  * {
+    @apply font-jakarta;
+  }
+
+  body {
+    @apply relative bg-netral-20 font-jakarta text-netral-100 antialiased;
+  }
+
+  /* Firefox */
+  :root {
+    --scrollbar-background: transparent;
+    --scrollbar-color: rgba(0, 0, 0, 0.1);
+  }
+
+  * {
+    scrollbar-width: 10px;
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-background);
+  }
+
+  /* Chrome, Edge, and Safari */
+
+  #sidebar {
+    scrollbar-gutter: stable both-edges;
+  }
+
+  #sidebar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar,
+  *::-webkit-scrollbar:horizontal {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track,
+  *::-webkit-scrollbar-track:horizontal {
+    background: var(--scrollbar-background);
+    border-radius: 6px;
+  }
+
+  *::-webkit-scrollbar-thumb,
+  *::-webkit-scrollbar-thumb:horizontal {
+    background-color: var(--scrollbar-color);
+    border-radius: 10px;
+    border: 2px solid var(--scrollbar-background);
+  }
+}
